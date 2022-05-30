@@ -1,0 +1,46 @@
+.wordMain {
+  border: 5px solid #3f52fc;
+  background: white;
+  margin: 2% 10% 0 10%;
+}
+
+.wordDataMain > button {
+  margin: 3px 10% 1% 10%;
+  background-color: #3eb2fd;
+  background-image: linear-gradient(1deg, #3f52fc, #149bf3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd, sans-serif;
+  font-size: 1.2rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+}
+
+.wordsContainer {
+  display: flex;
+  width: 100%;
+  overflow: scroll;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+  flex-direction: row;
+}
+
+.awords {
+  padding: 10px;
+  font-weight: 700;
+}
+
+.chartContainer {
+  margin-top: 20px;
+  width: 40%;
+}

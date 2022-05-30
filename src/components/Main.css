@@ -1,0 +1,154 @@
+.trunk{
+min-height: 100vh;
+background-color:#031630;
+position: relative;
+margin:0;
+display:flow-root;
+}
+
+.circle{
+  width:45%;
+  top:0;
+  right:0;
+  position: absolute;
+}
+
+.main{
+  display:flex;
+  margin-top:10px;
+  width:100%;
+  justify-content: space-between;
+  background-color:transparent;
+}
+
+.logo{
+  width:150px;
+  margin-left:3rem;
+  cursor: pointer;
+  }
+
+  .y{
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    height:92vh;
+ }
+
+  .sitting{
+    position: relative;
+    z-index: 100;
+    width:45%;
+    margin-top:0%;
+    margin-right:4%;  
+}
+  .mainText{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    margin-right:10%;
+  }
+  .mainText>h1{
+    color:rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight:100;
+    padding-left:5%;
+  }
+
+  .svg{
+    margin:0;
+  }
+
+@media all and (max-width:1064px){
+.sitting{
+visibility:hidden;
+}
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.main{
+height:100vh;
+background-color:#031630;
+z-index: 1;
+margin:0;
+} 
+.background-custom {
+    background: linear-gradient(90deg, #031630, #164cd4, #031630);
+    background-size: 300% 300%;
+    animation: gradient 11s alternate infinite;
+ }
+  @keyframes gradient {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+
+
+.logo{
+width:150px;
+margin-left:3rem;
+}
+
+.navContainer{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    margin:20px;    
+    position: absolute;
+}
+
+.midSection{
+  background-color:yellow;
+}
+
+
+.circle{
+width:700px;
+position:absolute;
+right:0;
+margin-top:-200;
+}
+
+.sitting{
+    position: absolute;
+    width:700px;
+    margin-left:40%;
+    margin-top:10%;
+    z-index:200;
+}
+
+.midSection{
+    display:flex;
+}*/

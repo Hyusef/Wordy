@@ -1,0 +1,15 @@
+ul {
+  display: flex;
+}
+li {
+  list-style-type: none;
+  margin-right: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #f7e7e6;
+  font-family: sans-serif;
+  z-index: 4;
+}
+li:hover {
+  color: royalblue;
+}
