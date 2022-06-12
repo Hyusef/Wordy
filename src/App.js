@@ -93,7 +93,7 @@ function App() {
     "it’s",
     "they’re",
     'will',
-    'i',
+    'o  ',
     'me',
     'you',
     'him',
