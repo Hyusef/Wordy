@@ -7,7 +7,7 @@
 
 </h1>
 
-<h4 align="center">Stockmore is a stock analysis tool. It has charts and a dashboard to view selected stocks </h4>
+<h4 align="center">Wordy is the best word collage generator. It can generate a collage based on the most common words in large texts.  </h4>
 
 
 
@@ -22,27 +22,27 @@
   <a href="#improvements">Improvements</a> •
 </p>
 
-![screenshot](https://user-images.githubusercontent.com/61304986/172940151-2b223749-7797-452a-8d34-0e77d53b5d4e.gif)
+![screenshot](https://user-images.githubusercontent.com/61304986/172940210-565203e5-c9ec-40e7-9987-ccb3fce2406e.gif)
 
 ## Key Features
 
  
-* Add and remove stocks from dashboard.
-* Compare Selected stocks in one graph.
-* Works also with the main crypto coins.
-* A news section for business news.
+* Generates Word Collage/Cloud from large texts.
+* Word collage can be customised based on colour, removal of certain words and a word limit.
+* A chart can be generated in addition to the word collage.
+* The generated cloud can be downloaded as pdf along with the chart.
 
 
 ## About
-<p> This is a stock analysis tool which can be used to analyse and compare stocks. It has a dashboard,a compare section using graphs, and a page to add the stocks using their symbols or the company name. Once a stock has been added some general info about that stock is shown in the dashboard along with the stock price of that day and a mini graph of that week's perfomance. If there are multiple stocks and they need to be compared the compare section can be used to view their prices over a longer time period on a chart. It also has an option to hide some of the stocks if you only want some of them. </p>
+<p> This is a word collage generator. It can be used to quickly see the most common words in a text visually. This can then be customised and downloaded.It works best with large texts as it is not intended for smaller texts. It also has an added feature where if a word is not understood clicking it will take you to the dictionary.</p>
 
 ## Tech Stack
-* React 
-* React Query 
-* React Router
-* Node.js
-* Material-UI 
+* React
+* Tailwind
+* jsPdf 
 * ChartJs 
+* Material-UI 
+* Styled-Components
 
 
 ## How To Use
@@ -51,10 +51,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/hyusef/stockmore
+$ git clone https://github.com/hyusef/Wordy
 
 # Go into the repository
-$ cd stockmore
+$ cd Wordy
 
 # Install dependencies
 $ npm install
@@ -64,31 +64,32 @@ $ npm start
 ```
 
 ## Challenges
-* The first challenge i had was using the Alphavantage API. It was very annoying and especially the search endpoint which wasn't very accurate. It also had a limit which would cause errors on certain occasions. I later installed an npm library based on yahoo finance data and it solved all my problems. 
+* I didn't have many challenges doing this project but i had one big challenge which was figuring out the formula for deciding the opacity and the font-size of the words. I had many different variations but i needed something that could work with very large texts while at the same time also working with not so large texts. I had a problem where if i used a small text sample the font size would become huge. I finally had to settle with this:
+```    
+const wordRatio =
+wordObj[e[0]] / elecount > 0.025
+? 0.015
+: wordObj[e[0]] / elecount;
 
-* I also had problems using react query, but the documentation was good and i solved all the problems. This is my first project where i used it and I'm in love with it. It had many features which would take me a long time to do myself. 
-
-* Another problem i had was figuring out how to implement the chart. I tried my best to find a formula that could put all of the different stocks with different ranges in one chart but that didn't work at all. I could not put a stock with a high cost in the same chart as one with a small cost as that would mess up the chart ranges. After alot of trying i found out that i had to use the difference in percentage between the current and the previous day  starting from day 0 and that worked as it deals with increase/decrease in percentages.
-
-
-
+opacity: `${wordRatio * wordsL * wordsL * 10 + 30}%`,
+fontSize: `${wordRatio * wordsL * wordsL * 10 + 5}px`,                        
+ ```
+ This code uses a ratio instead of the length of the texts. And if the ratio is larger that 0.025 i limit it to 0.015. This has given me much better results.
 
 
 ## Lessons Learned
-* Before doing this project i didn't know much about stocks. Doing this project i was forced to learn more about stocks and i learnt alot. Like the different exchanges like NYSE and NASDAQ, private and public companies, IPO's, organizational structure of companies and many other things. This in and of itself is a lesson which is that coding an app doesn't just teach you about coding but you'll also learn many different things depending on the app you're making.
-
-* I learnt about how to use react query, i learnt about pagination and how to make requests taking pagination into account, i learnt how to  visualise data using chartjs among other things.
+* I learnt that when creating an app we should take into account different groups of users. A scientist may use this app much differently than a businessman so even though the input is different their expectation is the same. A working app that does what it says it does and as programmers that is where the real challenge lies.
 
 ## Improvements
 
-* I don't think the first thing a user should see is text informing them that their dashboard is empty. I would therefore like to change that.
-* The code is not as clear as it should be. I want to add some comments to explain the less clear parts.
-* The reloading after adding a stock is unnecessary. Need to implement some sort of cache.
+* The typography of the middle section is trash.
+* The way the words are filtered is not ideal.
+* A few components can be further broken down.
 
 
 ## You may also like...
 
-- [Wordy](https://github.com/hyusef/wordy) - A word collage generator. 
+- [Posinews](https://github.com/hyusef/Posinews) - News scraped from r/upliftingnews.. 
 
 ## License
 
